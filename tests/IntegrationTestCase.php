@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace AndyDefer\JsonlCache\Tests;
 
-use AndyDefer\PhpServices\PhpServiceServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class IntegrationTestCase extends Orchestra
@@ -23,9 +22,7 @@ abstract class IntegrationTestCase extends Orchestra
 
     protected function getPackageProviders($app): array
     {
-        return [
-            PhpServiceServiceProvider::class,
-        ];
+        return [];
     }
 
     protected function defineEnvironment($app): void
